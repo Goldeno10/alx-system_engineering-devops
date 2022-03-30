@@ -1,2 +1,1 @@
-# alx-system_engineering-devops
-I'm an ALX Student, this is a new repo for day 0
+This is repo for task 0x00
