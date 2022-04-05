@@ -1,2 +1,2 @@
 #!/bin/bash
-printf $USER
+echo "$USER"
