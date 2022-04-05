@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
 echo "export $PATH:/action"
-=======
-echo "$(((($PATH +:/action"))))
->>>>>>> 0579648f7829c706ea44750e19e014c55f9b0396
