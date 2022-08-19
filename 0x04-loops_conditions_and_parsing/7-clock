@@ -4,7 +4,6 @@
 #display minutes from 1 to 59
 #must use the while loop
 h=0
-m=1
 while [ $h -le 12 ]
 do
 	echo "Hour : $h"
