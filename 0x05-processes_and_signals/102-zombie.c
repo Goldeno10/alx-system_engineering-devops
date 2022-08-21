@@ -25,16 +25,16 @@ int infinite_while(void)
  */
 int main(void)
 {
-	int i;
+	int i = 0;
 
 	while (i < 5)
 	{
-		if ((fork()) == 0)
+		if (fork() == 0)
 		{
-			dfprint(1, "Zombie process created, PID: %u\n", getpid());
+			dprintf(1, "Zombie process created, PID: %u\n", getpid());
 			return (0);
 		}
-		i++
+		i++;
 	}
 	infinite_while();
 	return (0);
