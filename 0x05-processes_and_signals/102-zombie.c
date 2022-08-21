@@ -5,10 +5,10 @@
 int infinite_while(void);
 
 /**
- *infinite_while - Creates an infinit loop
- *Return: 0 (success)
+ * infinite_while - Creates an infinit loop
+ *
+ * Return: 0 (success)
  */
-
 int infinite_while(void)
 {
 	while (1)
@@ -20,6 +20,7 @@ int infinite_while(void)
 
 /**
  *main - Entry point
+ *
  *Return: 0 (success)
  */
 int main(void)
