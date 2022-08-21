@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
-
+#include <sys/wait.h>
 int infinite_while(void);
 
 /**
@@ -31,7 +31,7 @@ int main(void)
 	{
 		if ((fork()) == 0)
 		{
-			printf("Zombie process created, PID: %u\n", getpid());
+			dfprint(1, "Zombie process created, PID: %u\n", getpid());
 			return (0);
 		}
 		i++;
