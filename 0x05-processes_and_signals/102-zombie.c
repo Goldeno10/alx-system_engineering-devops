@@ -25,16 +25,15 @@ int infinite_while(void)
 int main(void)
 {
 	pid_t ZOMBIE_PID;
-	int i = 0;
+	int i;
 
-	while (i < 5)
+	for (i = 0; i < 5; i++)
 	{
 		if ((fork()) == 0)
 		{
 			dfprint(1, "Zombie process created, PID: %u\n", getpid());
 			return (0);
 		}
-		i++;
 	}
 	infinite_while();
 	return (0);
