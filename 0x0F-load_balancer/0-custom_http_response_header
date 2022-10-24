@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+if [ "$#" -ne 2 ]
+then
+	echo "Usage: $0 header_name header_value"
+else
+	sudo sed -i "s/http {/http {\n\n\tadd_header $1 $2;\n/" /etc/nginx/nginx.conf &&\
+		sudo service nginx reload
+fi
