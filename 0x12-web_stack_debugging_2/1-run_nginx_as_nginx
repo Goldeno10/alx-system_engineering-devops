@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 # comfigure nginx to run as annother user passed as an argument
-if [ ! -z "$1" ]
-then
-	sudo -E -u "$1"  service nginx start
-fi
+sudo -E -u nginx  service nginx start
 
