@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# comfigure nginx to run as annother user passed as an argument
+sudo -E -u nginx  service nginx start
+
