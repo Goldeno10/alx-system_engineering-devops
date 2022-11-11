@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run the "whoami" command under the user passed as an argument
+# comfigure nginx to run as annother user passed as an argument
 if [ ! -z "$1" ]
 then
 	sudo -E -u "$1"  service nginx start
