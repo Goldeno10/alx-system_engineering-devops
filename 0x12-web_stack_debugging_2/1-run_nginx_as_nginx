@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# comfigure nginx to run as annother user passed as an argument
+sudo chmod 777 /etc/nginx/nginx.conf
+su nginx -c sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo -E -u nginx service nginx restart
