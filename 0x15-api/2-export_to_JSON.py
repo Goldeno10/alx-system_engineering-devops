@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-"""
-Python script that, using this REST API(https://jsonplaceholder.typicode.com/),
-for a given employee ID, returns information about his/her
-TODO list progress
-"""
+""" Python script to export data in the json format. """
 
-import csv
-import sys
-from urllib.request import urlopen
 import json
+from urllib.request import urlopen
+import sys
 
 user_id = int(sys.argv[1])
 
