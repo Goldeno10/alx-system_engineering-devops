@@ -33,8 +33,6 @@ if __name__ == "__main__":
         task_dict["task"] = item.get('title')
         task_dict["completed"] = item.get('completed')
         task_l.append(task_dict)
-
-
     dict_t = {}
     dict_t[str(user_id)] = task_l
 
