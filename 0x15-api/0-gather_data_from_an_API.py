@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-""" Python script that, using this REST API(https://jsonplaceholder.typicode.com/),
-for a given employee ID, returns information about his/her
-TODO list progress
-"""
+""" Python script that uses jsonplaceholder API to get
+information about a given employee. """
 
 import sys
 from urllib.request import urlopen
