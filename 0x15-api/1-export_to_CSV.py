@@ -28,10 +28,10 @@ if __name__ == "__main__":
 
     filename = f"{user_id}.csv"
     with open(filename, 'w', encoding="utf8") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for item in user_todo:
-            arr = [str(user_id),
-                   str(EMPLOYEE_NAME),
-                   str(item.get('completed')),
-                   str(item.get('title'))]
+            arr = [user_id,
+                   EMPLOYEE_NAME,
+                   item.get('completed'),
+                   item.get('title')]
             writer.writerow(arr)
