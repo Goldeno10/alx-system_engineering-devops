@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Python script that uses jsonplaceholder API to get
-information about a given employee. """
+"""Python script that uses jsonplaceholder API to get
+information about a given employee.
+"""
 
 import sys
 from urllib.request import urlopen

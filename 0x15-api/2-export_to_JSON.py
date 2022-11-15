@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Python script to export data in the json format. """
+"""Python script to export data in the json format."""
 
 import json
 from urllib.request import urlopen
