@@ -3,9 +3,10 @@
 information about a given employee.
 """
 
+import json
 import sys
 from urllib.request import urlopen
-import json
+
 
 if __name__ == "__main__":
     # user id gotten from command line input
