@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Python script that uses jsonplaceholder API to get information
-about a given employee."""
+about a given employee.
+"""
 
 import json
 import sys
