@@ -1,17 +1,18 @@
 #!usr/bin/python3
-"""Contains a function that queries the Reddit API."""
+""" Contains a function that queries the Reddit API. """
 
 import requests
 
 
 def top_ten(subreddit):
-    """queries the Reddit API and returns the number of subscribers
+    """
+    queries the Reddit API and returns the number of subscribers
     for a given subreddit
     """
     user_agent = 'Mozilla/5.0'
     headers = {'user-agent': user_agent}
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    param = {'limit': 10)
+    param = {'limit': 10}
     res = requests.get(url, headers=headers,
                        params=param,
                        allow_redirects=False)

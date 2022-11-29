@@ -1,10 +1,10 @@
 #!usr/bin/python3
-"""Contains a function that queries the Reddit API. """
+""" Contains a function that queries the Reddit API. """
 import requests
 
 
 def add_title_to_list(hot_posts, hot_list):
-    """Add post titles to a list."""
+    """ Add post titles to a list. """
     if len(hot_posts) == 0:
         return hot_list
     else:
@@ -14,7 +14,8 @@ def add_title_to_list(hot_posts, hot_list):
 
 
 def recurse(subreddit, hot_list=[], after=None):
-    """queries the Reddit API and returns the number of subscribers
+    """
+    queries the Reddit API and returns the number of subscribers
     for a given subreddit
     """
     user_agent = 'Mozilla/5.0'
