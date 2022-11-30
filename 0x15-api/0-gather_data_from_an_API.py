@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Python script that uses jsonplaceholder API to get information
+"""
+Python script that uses jsonplaceholder API to get information
 about a given employee.
 """
 

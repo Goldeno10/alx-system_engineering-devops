@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Python script to export data in the json format."""
+""" Python script to export data in the json format.."""
 
 import json
 from urllib.request import urlopen
 import sys
+
 
 if __name__ == "__main__":
     user_id = int(sys.argv[1])

@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """ Contains a function that queries the Reddit API. """
 
 import requests
