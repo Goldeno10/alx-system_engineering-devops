@@ -1,43 +1,41 @@
-The following is the incident report on the "0x17. Web stack
-debugging #3" task which was released on Nov 29, 2022, 6:00 AM WAT.
+## Background Context
 
-# Issue Summary 
 
-From 6:00 AM to 8:51 PM WAT the WordPress Apache server was 
-returning a 500 error response message. Clients who rely on the services of this 
-web server received an error response from the server. The root cause of this error was 
-a typo in the name of an essential module in the configuration file.
+Any software system will eventually fail, and that failure can come stem from a wide range of possible factors: bugs, traffic spikes, security issues, hardware failures, natural disasters, human error… Failing is normal and failing is actually a great opportunity to learn and improve. Any great Software Engineer must learn from his/her mistakes to make sure that they won’t happen again. Failing is fine, but failing twice because of the same issue is not.
 
-# Timeline (All time in West African Time)
+A postmortem is a tool widely used in the tech industry. After any outage, the team(s) in charge of the system will write a summary that has 2 main goals:
 
-6:00 AM: A configuration push was done 
-6:00 AM: The server services went down 
-7:40 AM: Analysis of possible causes begins.
-2:30 PM: A first failed configuration solution rollback.
-3:56 PM: Another failed configuration solution rollback.
-5:14 PM: Identified root cause.
-6:00 PM: Successful Configuration change push.
-6:02: Server restart begins.
-6:10: Server fully back online.
+- To provide the rest of the company’s employees easy access to information detailing the cause of the outage. Often outages can have a huge impact on a company, so managers and executives have to understand what happened and how it will impact their work.
+- And to ensure that the root cause(s) of the outage has been discovered and that measures are taken to make sure it will be fixed.
 
-# Root Cause 
+The structure is actually surprisingly simple and yet powerful. The report is made up of five parts, an issue summary, a timeline, root cause analysis, resolution and recovery, and lastly, corrective and preventative measures. Lets review each of these parts in detail.
 
-At 6:00 AM WAT, a configuration change was inadvertently released to the 
-production environment without first being released to the testing environment.
-The change includes a typo in the name of a key module in the configuration file. This caused the server - without the required module - to crash. As a result, the server sent 500 internal server error responses to clients.
+# Issue Summary
 
-# Resolution and recovery 
+- short summary (5 sentences)
+- list the duration along with start and end times (include timezone)
+- state the impact (most user requests resulted in 500 errors, at peak 100%)
+- close with root cause
 
-At 6:00 AM WAT, the task was released but it was until 7:40 AM that the check into the possible causes of the failure began.
-Between 2:30 PM and 5:14 PM, possible solutions were pushed, and while they all failed they also negate other possible causes and helped streamline the troubleshooting. 
-By 5:14 PM the root cause was identified, it happens that a vital module in the configuration file "/var/www/html/wp-settings.php" was named with the extension ".phpp" instead of ".php".
-Once this change was made and the server restarted, everything worked just fine.
+# Timeline
 
-# Corrective and Preventative Measures 
+- list the timezone
+- covers the outage duration
+- when outage began
+- when staff was notified
+- actions, events, …
+- when service was restored
 
-I have documented this issue for future cases.
-To address and prevent similar issues in the future all configuration files must be properly and carefully checked for such typos.
-Testing the configurations on developed servers before the push can help prevent future downtime.
+# Root Cause
 
-Sincerely,
-Muhammad Ibrahim
+- give a detailed explanation of event
+- do not sugarcoat
+
+# Resolution and recovery
+
+- give detailed explanation of actions taken (includes times)
+
+# Corrective and Preventative Measures
+
+- itemized list of ways to prevent it from happening again
+- what can we do better next time?
