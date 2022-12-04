@@ -7,12 +7,7 @@ then
 	echo "Usage: $0 database_password"
 else
 	echo "Creating database backup..."
-	sudo mysqldump -uroot -p"$1" --all-databases > backup.sql
-	if [ -f $(backup.sql) ]
-	then
-		echo "Compressing backup file..."
-		sudo tar -czvf $filename $(backup.sql)
-	else
-		echo "FILE:backup.sql not found"
-	fi
+	mysqldump -uroot -p"$1" --all-databases > backup.sql && \
+		echo "Compressing backup file..." &&
+		tar -czvf "$filename" backup.sql
 fi
