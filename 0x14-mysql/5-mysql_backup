@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Bash script that generates a MySQL dump and creates a compressed archive out of it.
+NOW=$(date +"%d-%m-%Y") 
+filename="$NOW.tar.gz"
+if [ $# -eq 0 ]
+then
+	echo "Usage: $0 database_password"
+else
+	echo "Creating database backup..."
+	mysqldump -uroot -p"$1" --all-databases > backup.sql && \
+		echo "Compressing backup file..." &&
+		tar -czvf "$filename" backup.sql
+fi
