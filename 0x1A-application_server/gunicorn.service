@@ -9,7 +9,7 @@ Group=www-data
 
 RuntimeDirectory=gunicorn
 WorkingDirectory=/home/ubuntu/AirBnB_clone_v4
-ExecStart=/home/ubuntu/.local/bin/gunicorn --workers 3 --bind 0.0.0.0:5003 web_dynamic.2hbnb:app >> /tmp/airbnb-access.log 2> /temp/airbnb-error.logaorbnb-access.log
+ExecStart=/home/ubuntu/.local/bin/gunicorn --workers 3 --bind 0.0.0.0:5003 web_dynamic.2hbnb:app >> /tmp/airbnb-access.log 2> /tmp/airbnb-error.logaorbnb-access.log
 ExecReload=/home/ubuntu/4-reload_gunicorn_no_downtime
 
 [Install]
