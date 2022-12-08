@@ -65,6 +65,11 @@ server {
                 proxy_pass http://0.0.0.0:5003/2-hbnh/;
 	}
 
+	location /static/ {
+		autoindex on;
+		alias ~/AirBnB_clone_v4/web_dynamic/static/
+	}
+
 	error_page 404 /custom_404.html;
 
 	location = /custom_404.html {
